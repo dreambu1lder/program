@@ -53,7 +53,7 @@ public class FileWr {
                                 } else if (maxF < Float.parseFloat(line)) {
                                     maxF = Float.parseFloat(line);
                                 }
-                            } else if (line != "") {
+                            } else if (line.trim().length() != 0) {
                                 ostring.add(line);
                                 countS++;
                                 if (line.length() < stringMin) {
@@ -112,7 +112,7 @@ public class FileWr {
                 maxF = minF;
             }
             if (longstat) {
-                System.out.println("Полная статистика:\n" + "количество Integer:" + countI + "\n" + "количество Float:" + countF + "\n" + "количество String:" + countS + "\n" + "сумма Integer:" + sumI + "\n" + "сумма Float:" + sumF + "\n" + "среднее Integer:" + sredI + "\n" + "среднее Float:" + sredF + "\n" + "Максимальная длина строки:" + stringMax + "\n" + "Минимальная длина строка:" + stringMin + "\n" + "Максимальное число Integer:" + maxI + "\n" + "Минимальное число Integer:" + minI + "\n" + "Максимальное число Float:" + maxF + "\n" + "Минимальное число Float:" + minF);
+                System.out.println("Полная статистика:\n" + "количество Integer:" + countI + "\n" + "количество Float:" + countF + "\n" + "количество String:" + countS + "\n" + "сумма Integer:" + sumI + "\n" + "сумма Float:" + sumF + "\n" + "среднее Integer:" + sredI + "\n" + "среднее Float:" + sredF + "\n" + "Максимальная длина строки:" + stringMax + "\n" + "Минимальная длина строки:" + stringMin + "\n" + "Максимальное число Integer:" + maxI + "\n" + "Минимальное число Integer:" + minI + "\n" + "Максимальное число Float:" + maxF + "\n" + "Минимальное число Float:" + minF);
             } else if (shortstat) {
                 System.out.println("Краткая статистика:\n" + "количество Integer:" + countI + "\n" + "количество Float:" + countF + "\n" + "количество String:" + countS);
             }
